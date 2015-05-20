@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CC9143A1AF74C73009D20D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC914391AF74C73009D20D0 /* main.m */; };
+		2CC9143D1AF74C73009D20D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9143C1AF74C73009D20D0 /* AppDelegate.m */; };
+		2CC914401AF74C73009D20D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9143F1AF74C73009D20D0 /* ViewController.m */; };
+		2CC914431AF74C73009D20D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC914411AF74C73009D20D0 /* Main.storyboard */; };
+		2CC914451AF74C73009D20D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CC914441AF74C73009D20D0 /* Images.xcassets */; };
+		2CC914481AF74C73009D20D0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC914461AF74C73009D20D0 /* LaunchScreen.xib */; };
+		2CC914541AF74C73009D20D0 /* ZDroppableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC914531AF74C73009D20D0 /* ZDroppableViewTests.m */; };
+		2CC914621AF74C9B009D20D0 /* ZDroppableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9145F1AF74C9B009D20D0 /* ZDroppableView.m */; };
+		2CC914631AF74C9B009D20D0 /* ZDropScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC914611AF74C9B009D20D0 /* ZDropScrollView.m */; };
+		2CC914661AF750B8009D20D0 /* PreDroScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC914651AF750B8009D20D0 /* PreDroScrollView.m */; };
+		2CC914831AF75187009D20D0 /* icon_detele@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CC914821AF75187009D20D0 /* icon_detele@2x.png */; };
+		2CC914851AF75193009D20D0 /* bg_add_imgshow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CC914841AF75193009D20D0 /* bg_add_imgshow@2x.png */; };
+		2CC914871AF751A5009D20D0 /* bg_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CC914861AF751A5009D20D0 /* bg_delete@2x.png */; };
+		2CC9148B1AF7551A009D20D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC9148A1AF7551A009D20D0 /* UIKit.framework */; };
+		2CC914A11AF75715009D20D0 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC914901AF75715009D20D0 /* EGOCache.m */; };
+		2CC914A21AF75715009D20D0 /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC914931AF75715009D20D0 /* EGOImageButton.m */; };
+		2CC914A31AF75715009D20D0 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC914961AF75715009D20D0 /* EGOImageLoadConnection.m */; };
+		2CC914A41AF75715009D20D0 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC914981AF75715009D20D0 /* EGOImageLoader.m */; };
+		2CC914A51AF75715009D20D0 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9149B1AF75715009D20D0 /* EGOImageView.m */; };
+		2CC914A61AF75715009D20D0 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9149E1AF75715009D20D0 /* EGORefreshTableHeaderView.m */; };
+		2CC914A71AF75715009D20D0 /* SmoothScaledEGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC914A01AF75715009D20D0 /* SmoothScaledEGOImageView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CC9144E1AF74C73009D20D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CC9142C1AF74C73009D20D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CC914331AF74C73009D20D0;
+			remoteInfo = ZDroppableView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2CC914341AF74C73009D20D0 /* ZDroppableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZDroppableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CC914381AF74C73009D20D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CC914391AF74C73009D20D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CC9143B1AF74C73009D20D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2CC9143C1AF74C73009D20D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2CC9143E1AF74C73009D20D0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2CC9143F1AF74C73009D20D0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2CC914421AF74C73009D20D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CC914441AF74C73009D20D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2CC914471AF74C73009D20D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2CC9144D1AF74C73009D20D0 /* ZDroppableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZDroppableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CC914521AF74C73009D20D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CC914531AF74C73009D20D0 /* ZDroppableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDroppableViewTests.m; sourceTree = "<group>"; };
+		2CC9145E1AF74C9B009D20D0 /* ZDroppableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDroppableView.h; sourceTree = "<group>"; };
+		2CC9145F1AF74C9B009D20D0 /* ZDroppableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDroppableView.m; sourceTree = "<group>"; };
+		2CC914601AF74C9B009D20D0 /* ZDropScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDropScrollView.h; sourceTree = "<group>"; };
+		2CC914611AF74C9B009D20D0 /* ZDropScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDropScrollView.m; sourceTree = "<group>"; };
+		2CC914641AF750B8009D20D0 /* PreDroScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreDroScrollView.h; sourceTree = "<group>"; };
+		2CC914651AF750B8009D20D0 /* PreDroScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreDroScrollView.m; sourceTree = "<group>"; };
+		2CC914821AF75187009D20D0 /* icon_detele@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_detele@2x.png"; sourceTree = "<group>"; };
+		2CC914841AF75193009D20D0 /* bg_add_imgshow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_add_imgshow@2x.png"; sourceTree = "<group>"; };
+		2CC914861AF751A5009D20D0 /* bg_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_delete@2x.png"; sourceTree = "<group>"; };
+		2CC9148A1AF7551A009D20D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2CC9148C1AF755C0009D20D0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2CC9148F1AF75715009D20D0 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
+		2CC914901AF75715009D20D0 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
+		2CC914921AF75715009D20D0 /* EGOImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageButton.h; sourceTree = "<group>"; };
+		2CC914931AF75715009D20D0 /* EGOImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageButton.m; sourceTree = "<group>"; };
+		2CC914951AF75715009D20D0 /* EGOImageLoadConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoadConnection.h; sourceTree = "<group>"; };
+		2CC914961AF75715009D20D0 /* EGOImageLoadConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoadConnection.m; sourceTree = "<group>"; };
+		2CC914971AF75715009D20D0 /* EGOImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoader.h; sourceTree = "<group>"; };
+		2CC914981AF75715009D20D0 /* EGOImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoader.m; sourceTree = "<group>"; };
+		2CC9149A1AF75715009D20D0 /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
+		2CC9149B1AF75715009D20D0 /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
+		2CC9149D1AF75715009D20D0 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		2CC9149E1AF75715009D20D0 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		2CC9149F1AF75715009D20D0 /* SmoothScaledEGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothScaledEGOImageView.h; sourceTree = "<group>"; };
+		2CC914A01AF75715009D20D0 /* SmoothScaledEGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothScaledEGOImageView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CC914311AF74C73009D20D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC9148B1AF7551A009D20D0 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CC9144A1AF74C73009D20D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CC9142B1AF74C73009D20D0 = {
+			isa = PBXGroup;
+			children = (
+				2CC9148A1AF7551A009D20D0 /* UIKit.framework */,
+				2CC914361AF74C73009D20D0 /* ZDroppableView */,
+				2CC914501AF74C73009D20D0 /* ZDroppableViewTests */,
+				2CC914351AF74C73009D20D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CC914351AF74C73009D20D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CC914341AF74C73009D20D0 /* ZDroppableView.app */,
+				2CC9144D1AF74C73009D20D0 /* ZDroppableViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CC914361AF74C73009D20D0 /* ZDroppableView */ = {
+			isa = PBXGroup;
+			children = (
+				2CC9148D1AF75715009D20D0 /* EGO */,
+				2CC9145D1AF74C9B009D20D0 /* DroppableView */,
+				2CC914641AF750B8009D20D0 /* PreDroScrollView.h */,
+				2CC914651AF750B8009D20D0 /* PreDroScrollView.m */,
+				2CC9143B1AF74C73009D20D0 /* AppDelegate.h */,
+				2CC9143C1AF74C73009D20D0 /* AppDelegate.m */,
+				2CC9143E1AF74C73009D20D0 /* ViewController.h */,
+				2CC9143F1AF74C73009D20D0 /* ViewController.m */,
+				2CC914411AF74C73009D20D0 /* Main.storyboard */,
+				2CC914441AF74C73009D20D0 /* Images.xcassets */,
+				2CC914461AF74C73009D20D0 /* LaunchScreen.xib */,
+				2CC914371AF74C73009D20D0 /* Supporting Files */,
+			);
+			path = ZDroppableView;
+			sourceTree = "<group>";
+		};
+		2CC914371AF74C73009D20D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CC914861AF751A5009D20D0 /* bg_delete@2x.png */,
+				2CC914841AF75193009D20D0 /* bg_add_imgshow@2x.png */,
+				2CC914821AF75187009D20D0 /* icon_detele@2x.png */,
+				2CC914381AF74C73009D20D0 /* Info.plist */,
+				2CC914391AF74C73009D20D0 /* main.m */,
+				2CC9148C1AF755C0009D20D0 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CC914501AF74C73009D20D0 /* ZDroppableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CC914531AF74C73009D20D0 /* ZDroppableViewTests.m */,
+				2CC914511AF74C73009D20D0 /* Supporting Files */,
+			);
+			path = ZDroppableViewTests;
+			sourceTree = "<group>";
+		};
+		2CC914511AF74C73009D20D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CC914521AF74C73009D20D0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CC9145D1AF74C9B009D20D0 /* DroppableView */ = {
+			isa = PBXGroup;
+			children = (
+				2CC9145E1AF74C9B009D20D0 /* ZDroppableView.h */,
+				2CC9145F1AF74C9B009D20D0 /* ZDroppableView.m */,
+				2CC914601AF74C9B009D20D0 /* ZDropScrollView.h */,
+				2CC914611AF74C9B009D20D0 /* ZDropScrollView.m */,
+			);
+			path = DroppableView;
+			sourceTree = "<group>";
+		};
+		2CC9148D1AF75715009D20D0 /* EGO */ = {
+			isa = PBXGroup;
+			children = (
+				2CC9148E1AF75715009D20D0 /* EGOCache */,
+				2CC914911AF75715009D20D0 /* EGOImageButton */,
+				2CC914941AF75715009D20D0 /* EGOImageLoader */,
+				2CC914991AF75715009D20D0 /* EGOImageView */,
+				2CC9149C1AF75715009D20D0 /* EGORefreshTable */,
+				2CC9149F1AF75715009D20D0 /* SmoothScaledEGOImageView.h */,
+				2CC914A01AF75715009D20D0 /* SmoothScaledEGOImageView.m */,
+			);
+			path = EGO;
+			sourceTree = "<group>";
+		};
+		2CC9148E1AF75715009D20D0 /* EGOCache */ = {
+			isa = PBXGroup;
+			children = (
+				2CC9148F1AF75715009D20D0 /* EGOCache.h */,
+				2CC914901AF75715009D20D0 /* EGOCache.m */,
+			);
+			path = EGOCache;
+			sourceTree = "<group>";
+		};
+		2CC914911AF75715009D20D0 /* EGOImageButton */ = {
+			isa = PBXGroup;
+			children = (
+				2CC914921AF75715009D20D0 /* EGOImageButton.h */,
+				2CC914931AF75715009D20D0 /* EGOImageButton.m */,
+			);
+			path = EGOImageButton;
+			sourceTree = "<group>";
+		};
+		2CC914941AF75715009D20D0 /* EGOImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				2CC914951AF75715009D20D0 /* EGOImageLoadConnection.h */,
+				2CC914961AF75715009D20D0 /* EGOImageLoadConnection.m */,
+				2CC914971AF75715009D20D0 /* EGOImageLoader.h */,
+				2CC914981AF75715009D20D0 /* EGOImageLoader.m */,
+			);
+			path = EGOImageLoader;
+			sourceTree = "<group>";
+		};
+		2CC914991AF75715009D20D0 /* EGOImageView */ = {
+			isa = PBXGroup;
+			children = (
+				2CC9149A1AF75715009D20D0 /* EGOImageView.h */,
+				2CC9149B1AF75715009D20D0 /* EGOImageView.m */,
+			);
+			path = EGOImageView;
+			sourceTree = "<group>";
+		};
+		2CC9149C1AF75715009D20D0 /* EGORefreshTable */ = {
+			isa = PBXGroup;
+			children = (
+				2CC9149D1AF75715009D20D0 /* EGORefreshTableHeaderView.h */,
+				2CC9149E1AF75715009D20D0 /* EGORefreshTableHeaderView.m */,
+			);
+			path = EGORefreshTable;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CC914331AF74C73009D20D0 /* ZDroppableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CC914571AF74C73009D20D0 /* Build configuration list for PBXNativeTarget "ZDroppableView" */;
+			buildPhases = (
+				2CC914301AF74C73009D20D0 /* Sources */,
+				2CC914311AF74C73009D20D0 /* Frameworks */,
+				2CC914321AF74C73009D20D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZDroppableView;
+			productName = ZDroppableView;
+			productReference = 2CC914341AF74C73009D20D0 /* ZDroppableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CC9144C1AF74C73009D20D0 /* ZDroppableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CC9145A1AF74C73009D20D0 /* Build configuration list for PBXNativeTarget "ZDroppableViewTests" */;
+			buildPhases = (
+				2CC914491AF74C73009D20D0 /* Sources */,
+				2CC9144A1AF74C73009D20D0 /* Frameworks */,
+				2CC9144B1AF74C73009D20D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CC9144F1AF74C73009D20D0 /* PBXTargetDependency */,
+			);
+			name = ZDroppableViewTests;
+			productName = ZDroppableViewTests;
+			productReference = 2CC9144D1AF74C73009D20D0 /* ZDroppableViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CC9142C1AF74C73009D20D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = zhenwanxiang;
+				TargetAttributes = {
+					2CC914331AF74C73009D20D0 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					2CC9144C1AF74C73009D20D0 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 2CC914331AF74C73009D20D0;
+					};
+				};
+			};
+			buildConfigurationList = 2CC9142F1AF74C73009D20D0 /* Build configuration list for PBXProject "ZDroppableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CC9142B1AF74C73009D20D0;
+			productRefGroup = 2CC914351AF74C73009D20D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CC914331AF74C73009D20D0 /* ZDroppableView */,
+				2CC9144C1AF74C73009D20D0 /* ZDroppableViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CC914321AF74C73009D20D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC914871AF751A5009D20D0 /* bg_delete@2x.png in Resources */,
+				2CC914431AF74C73009D20D0 /* Main.storyboard in Resources */,
+				2CC914481AF74C73009D20D0 /* LaunchScreen.xib in Resources */,
+				2CC914831AF75187009D20D0 /* icon_detele@2x.png in Resources */,
+				2CC914451AF74C73009D20D0 /* Images.xcassets in Resources */,
+				2CC914851AF75193009D20D0 /* bg_add_imgshow@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CC9144B1AF74C73009D20D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CC914301AF74C73009D20D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC914A61AF75715009D20D0 /* EGORefreshTableHeaderView.m in Sources */,
+				2CC914401AF74C73009D20D0 /* ViewController.m in Sources */,
+				2CC914621AF74C9B009D20D0 /* ZDroppableView.m in Sources */,
+				2CC9143D1AF74C73009D20D0 /* AppDelegate.m in Sources */,
+				2CC914A11AF75715009D20D0 /* EGOCache.m in Sources */,
+				2CC914A41AF75715009D20D0 /* EGOImageLoader.m in Sources */,
+				2CC9143A1AF74C73009D20D0 /* main.m in Sources */,
+				2CC914A51AF75715009D20D0 /* EGOImageView.m in Sources */,
+				2CC914A21AF75715009D20D0 /* EGOImageButton.m in Sources */,
+				2CC914631AF74C9B009D20D0 /* ZDropScrollView.m in Sources */,
+				2CC914661AF750B8009D20D0 /* PreDroScrollView.m in Sources */,
+				2CC914A31AF75715009D20D0 /* EGOImageLoadConnection.m in Sources */,
+				2CC914A71AF75715009D20D0 /* SmoothScaledEGOImageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CC914491AF74C73009D20D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC914541AF74C73009D20D0 /* ZDroppableViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CC9144F1AF74C73009D20D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CC914331AF74C73009D20D0 /* ZDroppableView */;
+			targetProxy = 2CC9144E1AF74C73009D20D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CC914411AF74C73009D20D0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CC914421AF74C73009D20D0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2CC914461AF74C73009D20D0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CC914471AF74C73009D20D0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CC914551AF74C73009D20D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2CC914561AF74C73009D20D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CC914581AF74C73009D20D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = ZDroppableView/PrefixHeader.pch;
+				INFOPLIST_FILE = ZDroppableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2CC914591AF74C73009D20D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = ZDroppableView/PrefixHeader.pch;
+				INFOPLIST_FILE = ZDroppableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2CC9145B1AF74C73009D20D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ZDroppableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZDroppableView.app/ZDroppableView";
+			};
+			name = Debug;
+		};
+		2CC9145C1AF74C73009D20D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ZDroppableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZDroppableView.app/ZDroppableView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CC9142F1AF74C73009D20D0 /* Build configuration list for PBXProject "ZDroppableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CC914551AF74C73009D20D0 /* Debug */,
+				2CC914561AF74C73009D20D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CC914571AF74C73009D20D0 /* Build configuration list for PBXNativeTarget "ZDroppableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CC914581AF74C73009D20D0 /* Debug */,
+				2CC914591AF74C73009D20D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CC9145A1AF74C73009D20D0 /* Build configuration list for PBXNativeTarget "ZDroppableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CC9145B1AF74C73009D20D0 /* Debug */,
+				2CC9145C1AF74C73009D20D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CC9142C1AF74C73009D20D0 /* Project object */;
+}
