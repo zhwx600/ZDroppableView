@@ -40,7 +40,7 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
     [super awakeFromNib];
     
     self.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
-    
+    sDROPVIEW_SIZE = ([[UIScreen mainScreen] bounds].size.width - 2*10 - 3*5)/4;
 }
 
 

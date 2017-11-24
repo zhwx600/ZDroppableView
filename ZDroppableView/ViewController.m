@@ -27,11 +27,11 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     
-    _o_imageDatas = [NSMutableArray arrayWithObjects:@"http://img.vxdcdn.com/system/20150416/2015041610541394.jpg",
-                     @"http://img.vxdcdn.com/system/20150310/2015031016552883.jpg",
-                     @"http://img.vxdcdn.com/system/20150312/2015031217491550.jpg",
-                     @"http://img.vxdcdn.com/system/20150317/2015031717275688.jpg",
-                     @"http://img.vxdcdn.com/system/20150331/2015033109575324.jpg",nil];
+    _o_imageDatas = [NSMutableArray arrayWithObjects:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511539684005&di=02e96382cb5f2dc45f6c156eaa3bc923&imgtype=0&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fd1a20cf431adcbef77b523d7a6af2edda2cc9f59.jpg",
+                     @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511539684005&di=bd64a98335dbcfb613b80b5380eeb4f8&imgtype=0&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F1ad5ad6eddc451dac228b23bbcfd5266d1163207.jpg",
+                     @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511539684600&di=002913adcf7cb0683c7ebcceb8876c5e&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fd058ccbf6c81800aa53059e4bb3533fa838b4707.jpg",
+                     @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511539684597&di=8fa40d72f6e31f0e3347d3792ff9ed29&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc75c10385343fbf276730692ba7eca8065388f20.jpg",
+                     @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511539779562&di=55ddf8bed0a2115d96a746f0346b2235&imgtype=0&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fimage%2Fcrop%253D0%252C0%252C640%252C904%2Fsign%3D389ad0cade0735fa85bf14f9a3612383%2Fd50735fae6cd7b890dd34852052442a7d8330ea7.jpg",nil];
     
     
     [self initCommonView];
