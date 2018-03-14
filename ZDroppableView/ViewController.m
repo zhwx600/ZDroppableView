@@ -7,16 +7,19 @@
 //
 
 #import "ViewController.h"
-#import "PreDroScrollView.h"
+#import "ZDropScrollView.h"
 
 
-@interface ViewController ()<PreDroScrollViewDelegate>
+@interface ViewController ()<ZDropScrollViewDelegate>
 {
     IBOutlet UIImageView *o_targetImageView;
-    IBOutlet PreDroScrollView *o_preScrollView;
+    IBOutlet ZDropScrollView *o_preScrollView;
 }
 
 @property (nonatomic,strong) NSMutableArray* o_imageDatas;//（url）类型数组
+
+@property (nonatomic,copy) NSString* o_grilImg;
+
 
 @end
 
@@ -27,11 +30,17 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     
-    _o_imageDatas = [NSMutableArray arrayWithObjects:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511539684005&di=02e96382cb5f2dc45f6c156eaa3bc923&imgtype=0&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fd1a20cf431adcbef77b523d7a6af2edda2cc9f59.jpg",
-                     @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511539684005&di=bd64a98335dbcfb613b80b5380eeb4f8&imgtype=0&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F1ad5ad6eddc451dac228b23bbcfd5266d1163207.jpg",
-                     @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511539684600&di=002913adcf7cb0683c7ebcceb8876c5e&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fd058ccbf6c81800aa53059e4bb3533fa838b4707.jpg",
-                     @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511539684597&di=8fa40d72f6e31f0e3347d3792ff9ed29&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc75c10385343fbf276730692ba7eca8065388f20.jpg",
-                     @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511539779562&di=55ddf8bed0a2115d96a746f0346b2235&imgtype=0&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fimage%2Fcrop%253D0%252C0%252C640%252C904%2Fsign%3D389ad0cade0735fa85bf14f9a3612383%2Fd50735fae6cd7b890dd34852052442a7d8330ea7.jpg",nil];
+    _o_imageDatas = [NSMutableArray arrayWithObjects:@"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3588772980,2454248748&fm=27&gp=0.jpg",
+                     @"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1944805937,3724010146&fm=27&gp=0.jpg",
+                     @"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1046983545,2051560208&fm=27&gp=0.jpg",
+                     @"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1983968240,1065183412&fm=27&gp=0.jpg",
+                     @"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=122378782,224856546&fm=27&gp=0.jpg",
+                     @"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=594559231,2167829292&fm=27&gp=0.jpg",
+                     @"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=889120611,3801177793&fm=27&gp=0.jpg",
+                     @"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4204984068,3896675956&fm=27&gp=0.jpg",
+                     @"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2239146502,165013516&fm=27&gp=0.jpg",nil];
+    
+    _o_grilImg = @"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1491526660,745456600&fm=27&gp=0.jpg";
     
     
     [self initCommonView];
@@ -49,8 +58,15 @@
     o_preScrollView.o_delegate = self;
     o_preScrollView.o_targetView = o_targetImageView;
     o_preScrollView.o_regionView = self.view;
+    
     o_preScrollView.o_imageDatas = _o_imageDatas;
-
+    
+//    o_preScrollView.o_maxCount = 0;
+//    o_preScrollView.o_isHideAddBtn = YES;
+    
+    [o_preScrollView reloadData];
+    
+    
 }
 
 
@@ -60,13 +76,15 @@
     
     NSLog(@"new _o_imageDatas = %@",o_preScrollView.o_imageDatas);
     
-    
+    NSString* girl = [NSMutableString stringWithFormat:@"%@",_o_grilImg];
     
     NSMutableArray* newArray = [NSMutableArray arrayWithArray:o_preScrollView.o_imageDatas];
-    [newArray addObject:_o_imageDatas[arc4random()%5]];
-
+    [newArray addObject:@"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1491526660,745456600&fm=27&gp=0.jpg"];
+    
+    
     o_preScrollView.o_imageDatas = newArray;
-
+    
+    [o_preScrollView reloadData];
 }
 
 -(void) didSelectWithIndex:(NSInteger)index userInfo:(id)userInfo
