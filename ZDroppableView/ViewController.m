@@ -99,7 +99,10 @@
 
 -(void) contentSizeDidChange:(CGSize)contenSize
 {
-    NSLog(@"size:%@",NSStringFromCGSize(contenSize));
+    NSLog(@"content size:%@",NSStringFromCGSize(contenSize));
+    
+    //可以在此动态修改 ZDropScrollView的高度
+    NSLog(@"ZDropScrollView height:%.2f",contenSize.height + _o_scrollView.contentInset.top + _o_scrollView.contentInset.bottom);
 }
 
 
