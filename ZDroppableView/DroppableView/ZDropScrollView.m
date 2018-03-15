@@ -8,6 +8,8 @@
 
 #import "ZDropScrollView.h"
 #import "ZDroppableView.h"
+#import "ZDeleteRegionView.h"
+
 
 // setup view vars
 static CGFloat sDROPVIEW_MARGIN = 5.0; //view间隔
@@ -20,7 +22,7 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
 }
 
 @property (nonatomic,strong) UIButton* o_addButton;
-
+@property (nonatomic,strong) ZDeleteRegionView* o_deleteTargetView;
 
 @end
 
@@ -41,6 +43,19 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
 {
     [super awakeFromNib];
     
+    [self setupData];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupData];
+    }
+    return self;
+}
+
+-(void) setupData{
     self.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
     sDROPVIEW_SIZE = ([[UIScreen mainScreen] bounds].size.width - 2*10 - 3*5)/4;
     
@@ -48,7 +63,7 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
     _o_isHideAddBtn = NO;
 }
 
-
+#pragma mark-
 
 -(NSMutableArray*) o_imageDatas
 {
@@ -101,14 +116,24 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
     
 }
 
+-(ZDeleteRegionView*) o_deleteTargetView
+{
+    if (!_o_deleteTargetView) {
+        _o_deleteTargetView = [[ZDeleteRegionView alloc] init];
+    }
+    return _o_deleteTargetView;
+}
 
-- (void) addViewwithIndex:(NSInteger)index
+
+#pragma mark-
+
+- (void) addViewWithIndex:(NSInteger)index
 {
     //    CGFloat contentWidth  = self.frame.size.width  - self.contentInset.left - self.contentInset.right;
     //    CGFloat contentHeight = self.frame.size.height - self.contentInset.top;
     CGSize size = CGSizeMake(sDROPVIEW_SIZE, sDROPVIEW_SIZE);
     
-    ZDroppableView * dropview = [[ZDroppableView alloc] initWithScrollView:self target:_o_targetView regionView:_o_regionView];
+    ZDroppableView * dropview = [[ZDroppableView alloc] initWithScrollView:self target:self.o_deleteTargetView regionView:_o_regionView];
     dropview.o_userInfo = _o_imageDatas[index];
     dropview.frame = CGRectMake(mLastPosition.x, mLastPosition.y, size.width, size.height);
     dropview.o_index = index;
@@ -120,10 +145,20 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
     [self relayout];
     
     UIImageView* tImageVIew = [[UIImageView alloc] init];
-    
-    [tImageVIew sd_setImageWithURL:[NSURL URLWithString:_o_imageDatas[index]] placeholderImage:[UIImage imageNamed:@"loading_120px"]];
+
+    if ([_o_imageDatas[index] isKindOfClass:[NSURL class]]) {
+        [tImageVIew sd_setImageWithURL:_o_imageDatas[index] placeholderImage:[UIImage imageNamed:@"default_icon"]];
+    }else if ([_o_imageDatas[index] isKindOfClass:[NSString class]]) {
+        [tImageVIew sd_setImageWithURL:[NSURL URLWithString:_o_imageDatas[index]] placeholderImage:[UIImage imageNamed:@"default_icon"]];
+    }else if ([_o_imageDatas[index] isKindOfClass:[UIImage class]]) {
+        [tImageVIew setImage:_o_imageDatas[index]];
+    }else{
+        [tImageVIew setImage:[UIImage imageNamed:@"default_icon"]];
+    }
     
     tImageVIew.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    tImageVIew.contentMode = UIViewContentModeScaleAspectFill;
+    tImageVIew.clipsToBounds = YES;
     tImageVIew.frame = CGRectMake(0, 0, dropview.frame.size.width, dropview.frame.size.height);
     [dropview addSubview:tImageVIew];
     
@@ -144,7 +179,7 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
     float posy = 0;
     CGRect frame = CGRectZero;
     mLastPosition = CGPointMake(0, -100);
-    CGFloat contentWidth = self.contentSize.width - self.contentInset.left - self.contentInset.right;
+    CGFloat contentWidth = self.frame.size.width - self.contentInset.left - self.contentInset.right;
     
     
     //先添加 所有的  ZDroppableView
@@ -238,6 +273,10 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
     self.contentSize = CGSizeMake(contentWidth, posy);
     
     [UIView commitAnimations];
+    
+    if ([_o_delegate respondsToSelector:@selector(contentSizeDidChange:)]) {
+        [_o_delegate contentSizeDidChange:self.contentSize];
+    }
 }
 
 
@@ -266,14 +305,14 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
 
 -(void) reloadData
 {
+    
     while (self.subviews.count) {
         UIView* child = self.subviews.lastObject;
         [child removeFromSuperview];
     }
     
     for (int i = 0; i < _o_imageDatas.count; i++) {
-        [self addViewwithIndex:i];
-        //        [self scrollToBottomAnimated:YES];
+        [self addViewWithIndex:i];
     }
     
     //显示 添加按钮呢
@@ -297,15 +336,8 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
     [self relayout];
     [self flashScrollIndicators];
     
-    if (dropView.o_userInfo) {
-        
-        NSInteger index = [_o_imageDatas indexOfObject:dropView.o_userInfo];
-        if (index >= 0) {
-            [_o_imageDatas removeObjectAtIndex:index];
-        }
-        
-        [self reloadData];
-    }
+    [_o_imageDatas removeObjectAtIndex:dropView.o_index];
+    [self reloadData];
     
     return YES;
 }
@@ -316,6 +348,10 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
     *otherDropViews = self.subviews;
 }
 
+-(void) droppableView:(ZDroppableView *)dropView exchangeOtherDropView:(ZDroppableView *)otherView
+{
+    [_o_imageDatas exchangeObjectAtIndex:dropView.o_index withObjectAtIndex:otherView.o_index];
+}
 
 -(void) droppableViewDidSelected:(ZDroppableView *)dropView
 {
@@ -326,7 +362,37 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
 }
 
 
+/**
+ * 拖动开始、结束时 对拖动控件【dropView】的操作
+ */
+- (void) droppableViewBeganDragging:(ZDroppableView*)dropView
+{
+    [self.o_deleteTargetView showInView:_o_regionView];
+}
+- (void) droppableViewEndedDragging: (ZDroppableView*)dropView
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.o_deleteTargetView hide];
+    });
+    
+}
 
+
+/**
+ * 拖动控件【dropView】 进入、离开 目标控件【targetView】的操作
+ */
+- (void) droppableView:(ZDroppableView*)dropView enterTarget:(UIView*)targetView
+{
+    [self.o_regionView addSubview:targetView];
+    [self.o_regionView bringSubviewToFront:dropView];
+    
+    [self.o_deleteTargetView setStatusIsIn:YES];
+    
+}
+- (void) droppableView:(ZDroppableView*)dropView leaveTarget:(UIView*)targetView
+{
+    [self.o_deleteTargetView setStatusIsIn:NO];
+}
 
 
 #pragma mark- 重写方法

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZDropScrollView.h"
 
+@class ZDropScrollView;
 @class ZDroppableView;
 
 @protocol ZDroppableViewDelegate <NSObject>
@@ -42,6 +42,8 @@
  */
 -(void) droppableView:(ZDroppableView*)dropView exchangeWithOthers:(NSArray**)otherDropViews;
 
+//此处delegate 为了 交换数组数据 使用
+-(void) droppableView:(ZDroppableView*)dropView exchangeOtherDropView:(ZDroppableView*)otherView;
 
 
 /**

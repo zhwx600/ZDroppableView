@@ -53,6 +53,8 @@
 		872454E32058FC5F00473453 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 872454C72058FC5F00473453 /* UIImageView+WebCache.m */; };
 		872454E42058FC5F00473453 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 872454C92058FC5F00473453 /* UIView+WebCache.m */; };
 		872454E52058FC5F00473453 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 872454CB2058FC5F00473453 /* UIView+WebCacheOperation.m */; };
+		872454E820592B7900473453 /* ZDeleteRegionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 872454E720592B7900473453 /* ZDeleteRegionView.m */; };
+		872454EA205A1F9200473453 /* default_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 872454E9205A1F9200473453 /* default_icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +157,9 @@
 		872454C92058FC5F00473453 /* UIView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCache.m"; sourceTree = "<group>"; };
 		872454CA2058FC5F00473453 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		872454CB2058FC5F00473453 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		872454E620592B7900473453 /* ZDeleteRegionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDeleteRegionView.h; sourceTree = "<group>"; };
+		872454E720592B7900473453 /* ZDeleteRegionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDeleteRegionView.m; sourceTree = "<group>"; };
+		872454E9205A1F9200473453 /* default_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +221,7 @@
 		2CC914371AF74C73009D20D0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				872454E9205A1F9200473453 /* default_icon@2x.png */,
 				2CC914861AF751A5009D20D0 /* bg_delete@2x.png */,
 				2CC914841AF75193009D20D0 /* bg_add_imgshow@2x.png */,
 				2CC914821AF75187009D20D0 /* icon_detele@2x.png */,
@@ -246,10 +252,12 @@
 		2CC9145D1AF74C9B009D20D0 /* DroppableView */ = {
 			isa = PBXGroup;
 			children = (
-				2CC9145E1AF74C9B009D20D0 /* ZDroppableView.h */,
-				2CC9145F1AF74C9B009D20D0 /* ZDroppableView.m */,
 				2CC914601AF74C9B009D20D0 /* ZDropScrollView.h */,
 				2CC914611AF74C9B009D20D0 /* ZDropScrollView.m */,
+				2CC9145E1AF74C9B009D20D0 /* ZDroppableView.h */,
+				2CC9145F1AF74C9B009D20D0 /* ZDroppableView.m */,
+				872454E620592B7900473453 /* ZDeleteRegionView.h */,
+				872454E720592B7900473453 /* ZDeleteRegionView.m */,
 			);
 			path = DroppableView;
 			sourceTree = "<group>";
@@ -459,6 +467,7 @@
 				2CC914871AF751A5009D20D0 /* bg_delete@2x.png in Resources */,
 				2CC914431AF74C73009D20D0 /* Main.storyboard in Resources */,
 				2CC914481AF74C73009D20D0 /* LaunchScreen.xib in Resources */,
+				872454EA205A1F9200473453 /* default_icon@2x.png in Resources */,
 				2CC914831AF75187009D20D0 /* icon_detele@2x.png in Resources */,
 				2CC914451AF74C73009D20D0 /* Images.xcassets in Resources */,
 				2CC914851AF75193009D20D0 /* bg_add_imgshow@2x.png in Resources */,
@@ -487,6 +496,7 @@
 				2CC914401AF74C73009D20D0 /* ViewController.m in Sources */,
 				872454DE2058FC5F00473453 /* UIButton+WebCache.m in Sources */,
 				2CC914621AF74C9B009D20D0 /* ZDroppableView.m in Sources */,
+				872454E820592B7900473453 /* ZDeleteRegionView.m in Sources */,
 				872454DF2058FC5F00473453 /* UIImage+ForceDecode.m in Sources */,
 				2CC9143D1AF74C73009D20D0 /* AppDelegate.m in Sources */,
 				872454CC2058FC5F00473453 /* NSButton+WebCache.m in Sources */,

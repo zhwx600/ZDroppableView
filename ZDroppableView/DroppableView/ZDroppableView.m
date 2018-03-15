@@ -56,7 +56,7 @@
 {
     if(self = [super init]){
         _o_animationRegionView = regionView;
-        _o_oldSuperView = superScrollView;
+        _o_oldSuperView = (UIView*)superScrollView;
         _o_targetView = targetView;
         
         _o_touchBeginDate = nil;
@@ -239,9 +239,9 @@
         {
             _o_isEntryTagert = YES;
             
-            if (_o_isDefaultAnimation) {
-                [self showDropViewEnterTargetAnimation];
-            }
+//            if (_o_isDefaultAnimation) {
+//                [self showDropViewEnterTargetAnimation];
+//            }
             
             if ([_o_delegate respondsToSelector:@selector(droppableView:enterTarget:)]) {
                 [_o_delegate droppableView:self enterTarget:_o_targetView];
@@ -253,9 +253,9 @@
     {
         _o_isEntryTagert = NO;
         
-        if (_o_isDefaultAnimation) {
-            [self showDropViewLeaveTargetAnimation];
-        }
+//        if (_o_isDefaultAnimation) {
+//            [self showDropViewLeaveTargetAnimation];
+//        }
         
         if ([_o_delegate respondsToSelector:@selector(droppableView:leaveTarget:)]) {
             [_o_delegate droppableView:self leaveTarget:_o_targetView];
@@ -352,11 +352,11 @@
                 CGPoint oldCenter = _o_oldOriginalPos;
                 _o_oldOriginalPos = newCenter;
                 
-                //                //交换自定义数据
-                //                id tempUserInfoOther = ((ZDroppableView*)otherView).o_userInfo;
-                //                id tempUserInfoSelf = _o_userInfo;
-                //                ((ZDroppableView*)otherView).o_userInfo = tempUserInfoSelf;
-                //                _o_userInfo = tempUserInfoOther;
+                //交换自定义数据
+                id tempUserInfoOther = ((ZDroppableView*)otherView).o_userInfo;
+                id tempUserInfoSelf = _o_userInfo;
+                ((ZDroppableView*)otherView).o_userInfo = tempUserInfoSelf;
+                _o_userInfo = tempUserInfoOther;
                 
                 //交换Index
                 NSUInteger tempIndexOther = ((ZDroppableView*)otherView).o_index;
@@ -364,7 +364,10 @@
                 ((ZDroppableView*)otherView).o_index = tempIndexSelf;
                 _o_index = tempIndexOther;
                 
-                
+                //交换 源 数组数据
+                if ([_o_delegate respondsToSelector:@selector(droppableView:exchangeOtherDropView:)]) {
+                    [_o_delegate droppableView:self exchangeOtherDropView:((ZDroppableView*)otherView)];
+                }
                 
                 [UIView beginAnimations: @"cxchange" context: nil];
                 otherView.center = oldCenter;
@@ -477,7 +480,7 @@
  */
 -(void) showDropViewEnterTargetAnimation
 {
-    _o_targetView.transform = CGAffineTransformMakeScale(1.5, 1.5);
+//    _o_targetView.transform = CGAffineTransformMakeScale(1.5, 1.5);
 }
 
 /**
@@ -485,7 +488,7 @@
  */
 -(void) showDropViewLeaveTargetAnimation
 {
-    _o_targetView.transform = CGAffineTransformMakeScale(1.0, 1.0);
+//    _o_targetView.transform = CGAffineTransformMakeScale(1.0, 1.0);
 }
 
 @end
