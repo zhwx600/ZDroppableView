@@ -336,7 +336,13 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
     [self relayout];
     [self flashScrollIndicators];
     
-    [_o_imageDatas removeObjectAtIndex:dropView.o_index];
+    NSInteger index = dropView.o_index;
+    [_o_imageDatas removeObjectAtIndex:index];
+    
+    if ([_o_delegate respondsToSelector:@selector(removeIndex:)]) {
+        [_o_delegate removeIndex:index];
+    }
+    
     [self reloadData];
     
     return YES;
@@ -351,6 +357,10 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
 -(void) droppableView:(ZDroppableView *)dropView exchangeOtherDropView:(ZDroppableView *)otherView
 {
     [_o_imageDatas exchangeObjectAtIndex:dropView.o_index withObjectAtIndex:otherView.o_index];
+    
+    if ([_o_delegate respondsToSelector:@selector(exchangeIndex:otherIndex:)]) {
+        [_o_delegate exchangeIndex:dropView.o_index otherIndex:otherView.o_index];
+    }
 }
 
 -(void) droppableViewDidSelected:(ZDroppableView *)dropView
@@ -399,14 +409,14 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
 
 - (BOOL)touchesShouldBegin:(NSSet *)touches withEvent:(UIEvent *)event inContentView:(UIView *)view
 {
-//    NSLog(@"用户点击了scroll上的视图%@,是否开始滚动scroll",view);
+    //    NSLog(@"用户点击了scroll上的视图%@,是否开始滚动scroll",view);
     //返回yes 是不滚动 scroll 返回no 是滚动scroll
     return YES;
 }
 - (BOOL)touchesShouldCancelInContentView:(UIView *)view
 {
     
-//    NSLog(@"用户点击的视图 %@",view);
+    //    NSLog(@"用户点击的视图 %@",view);
     
     //NO scroll不可以滚动 YES scroll可以滚动
     return NO;
@@ -414,3 +424,4 @@ static CGFloat sDROPVIEW_SIZE  = 97.0; //view 大小
 
 
 @end
+

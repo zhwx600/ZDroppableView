@@ -12,9 +12,12 @@
 @protocol ZDropScrollViewDelegate <NSObject>
 
 -(void) contentSizeDidChange:(CGSize)contenSize;
-
+//添加按钮 时间
 -(void) addNewView:(ZDropScrollView*)scrollView;
-
+//交换数据。 删除数据
+-(void) exchangeIndex:(NSInteger)index otherIndex:(NSInteger)otherIndex;
+-(void) removeIndex:(NSInteger)index;
+//选中某一个
 -(void) didSelectWithIndex:(NSInteger)index userInfo:(id)userInfo;
 
 @end

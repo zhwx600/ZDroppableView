@@ -91,6 +91,18 @@
     [_o_scrollView reloadData];
 }
 
+-(void) exchangeIndex:(NSInteger)index otherIndex:(NSInteger)otherIndex
+{
+    NSLog(@"交换 原始数据 %ld <--> %ld",index,otherIndex);
+    [self.o_imageDatas exchangeObjectAtIndex:index withObjectAtIndex:otherIndex];
+}
+
+-(void) removeIndex:(NSInteger)index
+{
+    NSLog(@"删除 原始数据 %ld",index);
+    [self.o_imageDatas removeObjectAtIndex:index];
+}
+
 -(void) didSelectWithIndex:(NSInteger)index userInfo:(id)userInfo
 {
     NSLog(@"select index=%ld,userInfo=%@",(long)index,userInfo);
