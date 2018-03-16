@@ -401,18 +401,29 @@
 
 - (void) changeSuperViewToOldSuperView
 {
-    UIView* oldSuperView = self.superview;
-    CGPoint oldCenter = self.center;
+    //    UIView* oldSuperView = self.superview;
+    //    CGPoint oldCenter = self.center;
+    //
+    //    [_o_oldSuperView addSubview: self];
+    //
+    //    CGPoint newCenter = [_o_oldSuperView convertPoint:oldCenter fromView:oldSuperView];
+    //    self.center = newCenter;
+    //
+    //    //动画复位
+    //    [UIView beginAnimations: @"drag" context: nil];
+    //    self.center = _o_oldOriginalPos;
+    //    [UIView commitAnimations];
     
-    [_o_oldSuperView addSubview: self];
+    UIView* currentSuperView = self.superview;
+    CGPoint moveToCenter = [currentSuperView convertPoint:_o_oldOriginalPos fromView:_o_oldSuperView];
     
-    CGPoint newCenter = [_o_oldSuperView convertPoint:oldCenter fromView:oldSuperView];
-    self.center = newCenter;
-    
-    //动画复位
-    [UIView beginAnimations: @"drag" context: nil];
-    self.center = _o_oldOriginalPos;
-    [UIView commitAnimations];
+    [UIView animateWithDuration:0.2 animations:^{
+        self.center = moveToCenter;
+    } completion:^(BOOL finished) {
+        
+        [_o_oldSuperView addSubview:self];
+        self.center = _o_oldOriginalPos;
+    }];
     
 }
 
